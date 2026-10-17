@@ -1,0 +1,8 @@
+# Local services for development (ENV-1). Not used in production.
+# The database is Supabase (D-33), so there is no local Postgres here.
+services:
+  mail:
+    image: axllent/mailpit:latest   # fake inbox: http://localhost:8025
+    ports:
+      - "8025:8025"   # web page
+      - "1025:1025"   # SMTP the app sends to

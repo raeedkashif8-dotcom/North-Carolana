@@ -1,0 +1,39 @@
+# Demo agent (D-27). Fake person, fake firm, fake numbers. Not a real agent.
+agent_id: demo-agent
+display_name: "Demo Agent"
+firm_name: "Example Realty"
+firm_address: "100 Example St, Raleigh, NC 27601"
+timezone: America/New_York
+status: test                       # test | live | paused
+contacts:
+  alert_phone: "+19195550100"      # 555-01xx numbers are reserved for fiction
+  alert_email: demo-agent@example.com
+  backup: null                     # [Depends on Q7]
+alert_hours: {start: "07:00", end: "22:00", urgent_override_hours: 12}
+email:
+  sender: demo-mailbox             # gmail_api for real agents (CP1-T8)
+  reply_to: "demo.agent+buyers@example.com"
+sms:
+  enabled: false                   # true only after registration and the lawyer gate (CR-14)
+lead_sources:
+  - id: website_form
+    type: web_form
+    buyer_source: true
+    consent_basis: own_form
+booking:
+  provider: calcom
+  url: "https://cal.com/demo-agent/buyer-consult"
+agreement:
+  esign: docusign
+  mode: draft_then_agent_sends
+  docusign_template_id: SECRET_REF_DS_TEMPLATE
+  send_trigger: on_booking
+  default_term_days: 30
+reminders:
+  offsets_hours: [24, 72, 168]
+  max: 3
+  window: {start: "09:00", end: "20:00"}
+  excluded_days: []
+booking_nudges_hours: [24]
+acknowledge_other_replies: true
+form_checklist: {confirmed_at: null}

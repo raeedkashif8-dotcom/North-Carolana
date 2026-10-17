@@ -1,0 +1,23 @@
+# M-01 Instant reply, email. DRAFT: not approved by any agent.
+id: M-01
+version: 1
+channel: email
+subject: "Thanks for reaching out about your home search"
+fallbacks:
+  buyer_first_name: "there"
+body: |-
+  Hi {buyer_first_name},
+
+  Thanks for getting in touch. I'd love to help with your home search.
+
+  {explainer}
+
+  The first step is a short call so I can learn what you're looking for. Pick a time that works for you here:
+  {booking_link}
+
+  Talk soon,
+  {agent_name}
+  {firm_name}
+  {firm_address}
+
+  Don't want these emails? Unsubscribe: {unsubscribe_link}

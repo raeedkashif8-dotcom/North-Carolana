@@ -1,0 +1,7 @@
+﻿
+=== gemini-3.1-flash-lite run 1: 30/30  stop 6/6=True  legal 8/8=True  PASS=True  (151.0s)
+
+=== gemini-3.1-flash-lite run 2: 30/30  stop 6/6=True  legal 8/8=True  PASS=True  (129.9s)
+
+=== gemini-3.1-flash-lite run 3: 30/30  stop 6/6=True  legal 8/8=True  PASS=True  (132.2s)
+    rate limited, waiting 15s
